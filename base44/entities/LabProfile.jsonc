@@ -1,0 +1,70 @@
+{
+  "name": "LabProfile",
+  "type": "object",
+  "properties": {
+    "favorites": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Identyfikatory ulubionych zwi\u0105zk\u00f3w"
+    },
+    "molecules": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      },
+      "description": "W\u0142asne uk\u0142ady zapisane w trybie 3D"
+    },
+    "history": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      },
+      "description": "Archiwum aktywno\u015bci laboratoryjnych"
+    },
+    "quizzes": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      },
+      "description": "Wyniki quiz\u00f3w"
+    },
+    "viewed": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      },
+      "description": "Obejrzane zwi\u0105zki"
+    },
+    "settings": {
+      "type": "object",
+      "properties": {
+        "theme": {
+          "type": "string"
+        },
+        "brightness": {
+          "type": "number"
+        },
+        "detail": {
+          "type": "string"
+        }
+      },
+      "description": "Motyw, jasno\u015b\u0107 i jako\u015b\u0107 modeli 3D"
+    }
+  },
+  "rls": {
+    "read": {
+      "created_by_id": "{{user.id}}"
+    },
+    "create": {
+      "created_by_id": "{{user.id}}"
+    },
+    "update": {
+      "created_by_id": "{{user.id}}"
+    },
+    "delete": {
+      "created_by_id": "{{user.id}}"
+    }
+  }
+}

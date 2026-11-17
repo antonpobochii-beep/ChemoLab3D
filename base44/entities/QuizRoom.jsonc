@@ -1,0 +1,61 @@
+{
+  "name": "QuizRoom",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string",
+      "description": "Sze\u015bciocyfrowy kod PIN pokoju gry na \u017cywo"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "lobby",
+        "question",
+        "reveal",
+        "finished"
+      ],
+      "enumColors": [
+        "gray",
+        "blue",
+        "purple",
+        "green"
+      ],
+      "default": "lobby",
+      "description": "Etap rozgrywki"
+    },
+    "topic": {
+      "type": "string",
+      "description": "Zakres materia\u0142u wybrany przez nauczyciela"
+    },
+    "questions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      },
+      "description": "Zestaw pyta\u0144 turnieju"
+    },
+    "current_index": {
+      "type": "number",
+      "default": 0,
+      "description": "Numer bie\u017c\u0105cego pytania"
+    },
+    "question_seconds": {
+      "type": "number",
+      "default": 20,
+      "description": "Czas na odpowied\u017a w sekundach"
+    },
+    "started_at": {
+      "type": "string",
+      "description": "Moment rozpocz\u0119cia bie\u017c\u0105cego pytania (ISO)"
+    }
+  },
+  "required": [
+    "code"
+  ],
+  "rls": {
+    "read": {},
+    "create": {},
+    "update": {},
+    "delete": {}
+  }
+}

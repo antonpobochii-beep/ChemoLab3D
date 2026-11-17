@@ -1,0 +1,66 @@
+{
+  "name": "QuizPlayer",
+  "type": "object",
+  "properties": {
+    "room_code": {
+      "type": "string",
+      "description": "Kod pokoju, do kt\u00f3rego do\u0142\u0105czy\u0142 gracz"
+    },
+    "name": {
+      "type": "string",
+      "description": "Nick gracza"
+    },
+    "avatar": {
+      "type": "string",
+      "description": "Symbol pierwiastka u\u017cyty jako awatar"
+    },
+    "score": {
+      "type": "number",
+      "default": 0,
+      "description": "Punkty turnieju"
+    },
+    "streak": {
+      "type": "number",
+      "default": 0,
+      "description": "Bie\u017c\u0105ca seria poprawnych odpowiedzi"
+    },
+    "best_streak": {
+      "type": "number",
+      "default": 0,
+      "description": "Najd\u0142u\u017csza seria w turnieju"
+    },
+    "correct_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Liczba poprawnych odpowiedzi"
+    },
+    "answered_index": {
+      "type": "number",
+      "default": -1,
+      "description": "Numer pytania, na kt\u00f3re gracz ju\u017c odpowiedzia\u0142"
+    },
+    "answer_option": {
+      "type": "string",
+      "description": "Wybrana odpowied\u017a"
+    },
+    "answer_correct": {
+      "type": "boolean",
+      "description": "Czy odpowied\u017a by\u0142a poprawna"
+    },
+    "answer_points": {
+      "type": "number",
+      "default": 0,
+      "description": "Punkty zdobyte za ostatni\u0105 odpowied\u017a"
+    }
+  },
+  "required": [
+    "room_code",
+    "name"
+  ],
+  "rls": {
+    "read": {},
+    "create": {},
+    "update": {},
+    "delete": {}
+  }
+}
